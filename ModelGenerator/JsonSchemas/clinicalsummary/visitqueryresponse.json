@@ -1,0 +1,1214 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Meta": {
+      "type": "object",
+      "properties": {
+        "DataModel": {
+          "type": "string"
+        },
+        "EventType": {
+          "type": "string"
+        },
+        "EventDateTime": {
+          "type": "string"
+        },
+        "Test": {
+          "type": "boolean"
+        },
+        "Source": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "string"
+            },
+            "Name": {
+              "type": "string"
+            }
+          }
+        },
+        "Destinations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ID": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "Message": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "number"
+            }
+          }
+        },
+        "Transmission": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "required": [
+        "DataModel",
+        "EventType"
+      ]
+    },
+    "Header": {
+      "type": "object",
+      "properties": {
+        "Document": {
+          "type": "object",
+          "properties": {
+            "Author": {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "type": "string"
+                },
+                "IDType": {
+                  "type": "string"
+                },
+                "Type": {
+                  "type": "string"
+                },
+                "FirstName": {
+                  "type": "string"
+                },
+                "LastName": {
+                  "type": "string"
+                },
+                "Credentials": {
+                  "type": "array",
+                  "items": {}
+                },
+                "Address": {
+                  "type": "object",
+                  "properties": {
+                    "StreetAddress": {
+                      "type": "string"
+                    },
+                    "City": {
+                      "type": "string"
+                    },
+                    "State": {
+                      "type": "string"
+                    },
+                    "ZIP": {
+                      "type": "string"
+                    },
+                    "County": {
+                      "type": "string"
+                    },
+                    "Country": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "Location": {
+                  "type": "object",
+                  "properties": {
+                    "Type": {
+                      "type": "string"
+                    },
+                    "Facility": {
+                      "type": "string"
+                    },
+                    "Department": {
+                      "type": "string"
+                    },
+                    "Room": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "PhoneNumber": {
+                  "type": "object",
+                  "properties": {
+                    "Office": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "ID": {
+              "type": "string"
+            },
+            "Locale": {
+              "type": "string"
+            },
+            "Title": {
+              "type": "string"
+            },
+            "DateTime": {
+              "type": "string"
+            },
+            "Type": {
+              "type": "string"
+            },
+            "Visit": {
+              "type": "object",
+              "properties": {
+                "Location": {
+                  "type": "object",
+                  "properties": {
+                    "Type": {
+                      "type": "string"
+                    },
+                    "Facility": {
+                      "type": "string"
+                    },
+                    "Department": {
+                      "type": "string"
+                    },
+                    "Room": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "StartDateTime": {
+                  "type": "string"
+                },
+                "Reason": {
+                  "type": "string"
+                },
+                "EndDateTime": {
+                  "type": "string"
+                },
+                "VisitNumber": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "Patient": {
+          "type": "object",
+          "properties": {
+            "Identifiers": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "type": "string"
+                  },
+                  "IDType": {
+                    "type": "string"
+                  },
+                  "Type": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "Demographics": {
+              "type": "object",
+              "properties": {
+                "FirstName": {
+                  "type": "string"
+                },
+                "LastName": {
+                  "type": "string"
+                },
+                "DOB": {
+                  "type": "string"
+                },
+                "SSN": {
+                  "type": "string"
+                },
+                "Sex": {
+                  "type": "string"
+                },
+                "Address": {
+                  "type": "object",
+                  "properties": {
+                    "StreetAddress": {
+                      "type": "string"
+                    },
+                    "City": {
+                      "type": "string"
+                    },
+                    "State": {
+                      "type": "string"
+                    },
+                    "County": {
+                      "type": "string"
+                    },
+                    "Country": {
+                      "type": "string"
+                    },
+                    "ZIP": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "PhoneNumber": {
+                  "type": "object",
+                  "properties": {
+                    "Home": {
+                      "type": "string"
+                    },
+                    "Mobile": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "EmailAddresses": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Address": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "Race": {
+                  "type": "string"
+                },
+                "Ethnicity": {
+                  "type": "string"
+                },
+                "Religion": {
+                  "type": "string"
+                },
+                "MaritalStatus": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "AllergyText": {
+      "type": "string"
+    },
+    "Allergies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          },
+          "Substance": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          },
+          "Reaction": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Code": {
+                  "type": "string"
+                },
+                "CodeSystem": {
+                  "type": "string"
+                },
+                "CodeSystemName": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "Text": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "Severity": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          },
+          "Status": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          },
+          "StartDate": {
+            "type": "string"
+          },
+          "EndDate": {
+            "type": "string"
+          },
+          "Comment": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "AssessmentText": {
+      "type": "string"
+    },
+    "Assessment": {
+      "type": "object",
+      "properties": {
+        "Diagnoses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Value": {
+                "type": "string"
+              },
+              "DateTime": {
+                "type": "string"
+              },
+              "IsNegativeIndicator": {
+                "type": "boolean"
+              },
+              "Codes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Code": {
+                      "type": "string"
+                    },
+                    "CodeSystem": {
+                      "type": "string"
+                    },
+                    "CodeSystemName": {
+                      "type": "string"
+                    },
+                    "Name": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ChiefComplaintText": {
+      "type": "string"
+    },
+    "EncountersText": {
+      "type": "string"
+    },
+    "Encounters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          },
+          "DateTime": {
+            "type": "string"
+          },
+          "EndDateTime": {
+            "type": "string"
+          },
+          "Providers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "type": "string"
+                },
+                "IDType": {
+                  "type": "string"
+                },
+                "FirstName": {
+                  "type": "string"
+                },
+                "LastName": {
+                  "type": "string"
+                },
+                "Credentials": {
+                  "type": "array",
+                  "items": {}
+                },
+                "Address": {
+                  "type": "object",
+                  "properties": {
+                    "StreetAddress": {
+                      "type": "string"
+                    },
+                    "City": {
+                      "type": "string"
+                    },
+                    "State": {
+                      "type": "string"
+                    },
+                    "ZIP": {
+                      "type": "string"
+                    },
+                    "County": {
+                      "type": "string"
+                    },
+                    "Country": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "Location": {
+                  "type": "object",
+                  "properties": {
+                    "Type": {
+                      "type": "string"
+                    },
+                    "Facility": {
+                      "type": "string"
+                    },
+                    "Department": {
+                      "type": "string"
+                    },
+                    "Room": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "PhoneNumber": {
+                  "type": "object",
+                  "properties": {
+                    "Office": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "Role": {
+                  "type": "object",
+                  "properties": {
+                    "Code": {
+                      "type": "string"
+                    },
+                    "CodeSystem": {
+                      "type": "string"
+                    },
+                    "CodeSystemName": {
+                      "type": "string"
+                    },
+                    "Name": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "Locations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Address": {
+                  "type": "object",
+                  "properties": {
+                    "StreetAddress": {
+                      "type": "string"
+                    },
+                    "City": {
+                      "type": "string"
+                    },
+                    "State": {
+                      "type": "string"
+                    },
+                    "Country": {
+                      "type": "string"
+                    },
+                    "ZIP": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "Type": {
+                  "type": "object",
+                  "properties": {
+                    "Code": {
+                      "type": "string"
+                    },
+                    "CodeSystem": {
+                      "type": "string"
+                    },
+                    "CodeSystemName": {
+                      "type": "string"
+                    },
+                    "Name": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "Name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "Diagnosis": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Code": {
+                  "type": "string"
+                },
+                "CodeSystem": {
+                  "type": "string"
+                },
+                "CodeSystemName": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "ReasonForVisit": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Code": {
+                  "type": "string"
+                },
+                "CodeSystem": {
+                  "type": "string"
+                },
+                "CodeSystemName": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "HistoryOfPresentIllnessText": {
+      "type": "string"
+    },
+    "InstructionsText": {
+      "type": "string"
+    },
+    "InterventionsText": {
+      "type": "string"
+    },
+    "MedicationsText": {
+      "type": "string"
+    },
+    "Medications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Prescription": {
+            "type": "boolean"
+          },
+          "FreeTextSig": {
+            "type": "string"
+          },
+          "Dose": {
+            "type": "object",
+            "properties": {
+              "Quantity": {
+                "type": "string"
+              },
+              "Units": {
+                "type": "string"
+              }
+            }
+          },
+          "Rate": {
+            "type": "object",
+            "properties": {
+              "Quantity": {
+                "type": "string"
+              },
+              "Units": {
+                "type": "string"
+              }
+            }
+          },
+          "Route": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          },
+          "StartDate": {
+            "type": "string"
+          },
+          "EndDate": {
+            "type": "string"
+          },
+          "Frequency": {
+            "type": "object",
+            "properties": {
+              "Period": {
+                "type": "string"
+              },
+              "Unit": {
+                "type": "string"
+              }
+            }
+          },
+          "Product": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ObjectiveText": {
+      "type": "string"
+    },
+    "PhysicalExamText": {
+      "type": "string"
+    },
+    "PlanOfCareText": {
+      "type": "string"
+    },
+    "PlanOfCare": {
+      "type": "object",
+      "properties": {
+        "Orders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "Status": {
+                "type": "string"
+              },
+              "DateTime": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "Procedures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "Status": {
+                "type": "string"
+              },
+              "DateTime": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "Encounters": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "Status": {
+                "type": "string"
+              },
+              "DateTime": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "MedicationAdministration": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Status": {
+                "type": "string"
+              },
+              "Dose": {
+                "type": "object",
+                "properties": {
+                  "Quantity": {
+                    "type": "string"
+                  },
+                  "Units": {
+                    "type": "string"
+                  }
+                }
+              },
+              "Rate": {
+                "type": "object",
+                "properties": {
+                  "Quantity": {
+                    "type": "string"
+                  },
+                  "Units": {
+                    "type": "string"
+                  }
+                }
+              },
+              "Route": {
+                "type": "object",
+                "properties": {
+                  "Code": {
+                    "type": "string"
+                  },
+                  "CodeSystem": {
+                    "type": "string"
+                  },
+                  "CodeSystemName": {
+                    "type": "string"
+                  },
+                  "Name": {
+                    "type": "string"
+                  }
+                }
+              },
+              "StartDate": {
+                "type": "string"
+              },
+              "EndDate": {
+                "type": "string"
+              },
+              "Frequency": {
+                "type": "object",
+                "properties": {
+                  "Period": {
+                    "type": "string"
+                  },
+                  "Unit": {
+                    "type": "string"
+                  }
+                }
+              },
+              "Product": {
+                "type": "object",
+                "properties": {
+                  "Code": {
+                    "type": "string"
+                  },
+                  "CodeSystem": {
+                    "type": "string"
+                  },
+                  "CodeSystemName": {
+                    "type": "string"
+                  },
+                  "Name": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Supplies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "Status": {
+                "type": "string"
+              },
+              "DateTime": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "Services": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "Status": {
+                "type": "string"
+              },
+              "DateTime": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ProblemsText": {
+      "type": "string"
+    },
+    "Problems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "StartDate": {
+            "type": "string"
+          },
+          "EndDate": {
+            "type": "string"
+          },
+          "Code": {
+            "type": "string"
+          },
+          "CodeSystem": {
+            "type": "string"
+          },
+          "CodeSystemName": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Category": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          },
+          "HealthStatus": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          },
+          "Status": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "CodeSystem": {
+                "type": "string"
+              },
+              "CodeSystemName": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ReasonForReferralText": {
+      "type": "string"
+    },
+    "ReasonForVisitText": {
+      "type": "string"
+    },
+    "ResultText": {
+      "type": "string"
+    },
+    "Results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Code": {
+            "type": "string"
+          },
+          "CodeSystem": {
+            "type": "string"
+          },
+          "CodeSystemName": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Status": {
+            "type": "string"
+          },
+          "Observations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Code": {
+                  "type": "string"
+                },
+                "CodeSystem": {
+                  "type": "string"
+                },
+                "CodeSystemName": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "Status": {
+                  "type": "string"
+                },
+                "Interpretation": {
+                  "type": "string"
+                },
+                "DateTime": {
+                  "type": "string"
+                },
+                "Value": {
+                  "type": "string"
+                },
+                "Units": {
+                  "type": "string"
+                },
+                "ReferenceRange": {
+                  "type": "object",
+                  "properties": {
+                    "Low": {
+                      "type": "number"
+                    },
+                    "High": {
+                      "type": "number"
+                    },
+                    "Text": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ReviewOfSystemsText": {
+      "type": "string"
+    },
+    "SubjectiveText": {
+      "type": "string"
+    },
+    "VitalSignsText": {
+      "type": "string"
+    },
+    "VitalSigns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "DateTime": {
+            "type": "string"
+          },
+          "Observations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Code": {
+                  "type": "string"
+                },
+                "CodeSystem": {
+                  "type": "string"
+                },
+                "CodeSystemName": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "Status": {
+                  "type": "string"
+                },
+                "Interpretation": {
+                  "type": "string"
+                },
+                "DateTime": {
+                  "type": "string"
+                },
+                "Value": {
+                  "type": "string"
+                },
+                "Units": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Meta"
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Meta": {
+      "type": "object",
+      "properties": {
+        "DataModel": {
+          "type": "string"
+        },
+        "EventType": {
+          "type": "string"
+        },
+        "EventDateTime": {
+          "type": "string"
+        },
+        "Test": {
+          "type": "boolean"
+        },
+        "Source": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "string"
+            },
+            "Name": {
+              "type": "string"
+            }
+          }
+        },
+        "Destinations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ID": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "Message": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "number"
+            }
+          }
+        },
+        "Transmission": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "number"
+            }
+          }
+        },
+        "FacilityCode": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "DataModel",
+        "EventType"
+      ]
+    },
+    "Patient": {
+      "type": "object",
+      "properties": {
+        "Identifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ID": {
+                "type": "string"
+              },
+              "IDType": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "ID",
+              "IDType"
+            ]
+          }
+        },
+        "Demographics": {
+          "type": "object",
+          "properties": {
+            "FirstName": {
+              "type": "string"
+            },
+            "MiddleName": {
+              "type": "string"
+            },
+            "LastName": {
+              "type": "string"
+            },
+            "DOB": {
+              "type": "string"
+            },
+            "SSN": {
+              "type": "string"
+            },
+            "Sex": {
+              "type": "string"
+            },
+            "Race": {
+              "type": "string"
+            },
+            "IsHispanic": {
+              "type": "boolean"
+            },
+            "MaritalStatus": {
+              "type": "string"
+            },
+            "IsDeceased": {
+              "type": "boolean"
+            },
+            "DeathDateTime": {
+              "type": "string"
+            },
+            "PhoneNumber": {
+              "type": "object",
+              "properties": {
+                "Home": {
+                  "type": "string"
+                },
+                "Office": {
+                  "type": "string"
+                },
+                "Mobile": {
+                  "type": "string"
+                }
+              }
+            },
+            "EmailAddresses": {
+              "type": "array",
+              "items": {}
+            },
+            "Language": {
+              "type": "string"
+            },
+            "Citizenship": {
+              "type": "array",
+              "items": {}
+            },
+            "Address": {
+              "type": "object",
+              "properties": {
+                "StreetAddress": {
+                  "type": "string"
+                },
+                "City": {
+                  "type": "string"
+                },
+                "State": {
+                  "type": "string"
+                },
+                "ZIP": {
+                  "type": "string"
+                },
+                "County": {
+                  "type": "string"
+                },
+                "Country": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "Notes": {
+          "type": "array",
+          "items": {}
+        }
+      },
+      "required": [
+        "Identifiers"
+      ]
+    },
+    "Visit": {
+      "type": "object",
+      "properties": {
+        "VisitNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "Vaccinations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "DateTime": {
+            "type": "string"
+          },
+          "Product": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "Codeset": {
+                "type": "string"
+              },
+              "Description": {
+                "type": "string"
+              },
+              "LotNumber": {
+                "type": "string"
+              },
+              "ExpirationDate": {
+                "type": "string"
+              },
+              "Manufacturer": {
+                "type": "object",
+                "properties": {
+                  "Code": {
+                    "type": "string"
+                  },
+                  "Codeset": {
+                    "type": "string"
+                  },
+                  "Name": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "required": [
+              "Code"
+            ]
+          },
+          "Route": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "Codeset": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          },
+          "Site": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "Codeset": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          },
+          "Dose": {
+            "type": "object",
+            "properties": {
+              "Quantity": {
+                "type": "string"
+              },
+              "Units": {
+                "type": "string"
+              }
+            }
+          },
+          "Order": {
+            "type": "object",
+            "properties": {
+              "ID": {
+                "type": "string"
+              },
+              "EHRID": {
+                "type": "string"
+              }
+            }
+          },
+          "Notes": {
+            "type": "array",
+            "items": {}
+          },
+          "RefusalReason": {
+            "type": "string"
+          },
+          "Provider": {
+            "type": "object",
+            "properties": {
+              "ID": {
+                "type": "string"
+              },
+              "IDType": {
+                "type": "string"
+              },
+              "FirstName": {
+                "type": "string"
+              },
+              "LastName": {
+                "type": "string"
+              },
+              "Credentials": {
+                "type": "array",
+                "items": {}
+              },
+              "Address": {
+                "type": "object",
+                "properties": {
+                  "StreetAddress": {
+                    "type": "string"
+                  },
+                  "City": {
+                    "type": "string"
+                  },
+                  "State": {
+                    "type": "string"
+                  },
+                  "ZIP": {
+                    "type": "string"
+                  },
+                  "County": {
+                    "type": "string"
+                  },
+                  "Country": {
+                    "type": "string"
+                  }
+                }
+              },
+              "Location": {
+                "type": "object",
+                "properties": {
+                  "Type": {
+                    "type": "string"
+                  },
+                  "Facility": {
+                    "type": "string"
+                  },
+                  "Department": {
+                    "type": "string"
+                  },
+                  "Room": {
+                    "type": "string"
+                  }
+                }
+              },
+              "PhoneNumber": {
+                "type": "object",
+                "properties": {
+                  "Office": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "Location": {
+            "type": "object",
+            "properties": {
+              "Type": {
+                "type": "string"
+              },
+              "Facility": {
+                "type": "string"
+              },
+              "Department": {
+                "type": "string"
+              },
+              "Room": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "DateTime",
+          "Product"
+        ]
+      }
+    }
+  },
+  "required": [
+    "Meta",
+    "Patient",
+    "Vaccinations"
+  ]
+}

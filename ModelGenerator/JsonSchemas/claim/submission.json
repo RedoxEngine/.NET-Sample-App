@@ -1,0 +1,690 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Meta": {
+      "type": "object",
+      "properties": {
+        "DataModel": {
+          "type": "string"
+        },
+        "EventType": {
+          "type": "string"
+        },
+        "EventDateTime": {
+          "type": "string"
+        },
+        "Test": {
+          "type": "boolean"
+        },
+        "Source": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "string"
+            },
+            "Name": {
+              "type": "string"
+            }
+          }
+        },
+        "Destinations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ID": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "Message": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "number"
+            }
+          }
+        },
+        "Transmission": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "number"
+            }
+          }
+        },
+        "FacilityCode": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "DataModel",
+        "EventType"
+      ]
+    },
+    "Transaction": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "type": "string"
+        },
+        "IDType": {
+          "type": "string"
+        },
+        "Type": {
+          "type": "string"
+        },
+        "Submitter": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "string"
+            },
+            "IDType": {
+              "type": "string"
+            },
+            "Name": {
+              "type": "string"
+            },
+            "EmailAddress": {
+              "type": "string"
+            },
+            "PhoneNumber": {
+              "type": "object",
+              "properties": {
+                "Office": {
+                  "type": "string"
+                },
+                "Fax": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "Receiver": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "string"
+            },
+            "IDType": {
+              "type": "string"
+            },
+            "Name": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "BillingProvider": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "type": "string"
+        },
+        "IDType": {
+          "type": "string"
+        },
+        "FirstName": {
+          "type": "string"
+        },
+        "MiddleName": {
+          "type": "string"
+        },
+        "LastName": {
+          "type": "string"
+        },
+        "OrganizationName": {
+          "type": "string"
+        },
+        "Specialty": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "string"
+            },
+            "Description": {
+              "type": "string"
+            }
+          }
+        },
+        "Address": {
+          "type": "object",
+          "properties": {
+            "StreetAddress": {
+              "type": "string"
+            },
+            "City": {
+              "type": "string"
+            },
+            "State": {
+              "type": "string"
+            },
+            "ZIP": {
+              "type": "string"
+            },
+            "County": {
+              "type": "string"
+            },
+            "Country": {
+              "type": "string"
+            }
+          }
+        },
+        "EmailAddress": {
+          "type": "string"
+        },
+        "PhoneNumber": {
+          "type": "object",
+          "properties": {
+            "Office": {
+              "type": "string"
+            },
+            "Fax": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "Subscriber": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "type": "string"
+        },
+        "IDType": {
+          "type": "string"
+        },
+        "FirstName": {
+          "type": "string"
+        },
+        "MiddleName": {
+          "type": "string"
+        },
+        "LastName": {
+          "type": "string"
+        },
+        "OrganizationName": {
+          "type": "string"
+        },
+        "Address": {
+          "type": "object",
+          "properties": {
+            "StreetAddress": {
+              "type": "string"
+            },
+            "City": {
+              "type": "string"
+            },
+            "State": {
+              "type": "string"
+            },
+            "ZIP": {
+              "type": "string"
+            },
+            "County": {
+              "type": "string"
+            },
+            "Country": {
+              "type": "string"
+            }
+          }
+        },
+        "DOB": {
+          "type": "string"
+        },
+        "Sex": {
+          "type": "string"
+        },
+        "RelationToPatient": {
+          "type": "string"
+        },
+        "ResponsibilityLevel": {
+          "type": "string"
+        },
+        "Insurance": {
+          "type": "object",
+          "properties": {
+            "Plan": {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "type": "string"
+                },
+                "IDType": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                }
+              }
+            },
+            "Company": {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "type": "string"
+                },
+                "IDType": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "Address": {
+                  "type": "object",
+                  "properties": {
+                    "StreetAddress": {
+                      "type": "string"
+                    },
+                    "City": {
+                      "type": "string"
+                    },
+                    "State": {
+                      "type": "string"
+                    },
+                    "ZIP": {
+                      "type": "string"
+                    },
+                    "County": {
+                      "type": "string"
+                    },
+                    "Country": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "PhoneNumber": {
+                  "type": "string"
+                }
+              }
+            },
+            "GroupNumber": {
+              "type": "string"
+            },
+            "GroupName": {
+              "type": "string"
+            },
+            "EffectiveDate": {
+              "type": "string"
+            },
+            "ExpirationDate": {
+              "type": "string"
+            },
+            "PolicyNumber": {
+              "type": "string"
+            },
+            "AgreementType": {
+              "type": "string"
+            },
+            "CoverageType": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "Patient": {
+      "type": "object",
+      "properties": {
+        "Identifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ID": {
+                "type": "string"
+              },
+              "IDType": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "Demographics": {
+          "type": "object",
+          "properties": {
+            "FirstName": {
+              "type": "string"
+            },
+            "MiddleName": {
+              "type": "string"
+            },
+            "LastName": {
+              "type": "string"
+            },
+            "DOB": {
+              "type": "string"
+            },
+            "SSN": {
+              "type": "string"
+            },
+            "Sex": {
+              "type": "string"
+            },
+            "Race": {
+              "type": "string"
+            },
+            "IsHispanic": {
+              "type": "boolean"
+            },
+            "MaritalStatus": {
+              "type": "string"
+            },
+            "IsDeceased": {
+              "type": "boolean"
+            },
+            "DeathDateTime": {
+              "type": "string"
+            },
+            "PhoneNumber": {
+              "type": "object",
+              "properties": {
+                "Home": {
+                  "type": "string"
+                },
+                "Office": {
+                  "type": "string"
+                },
+                "Mobile": {
+                  "type": "string"
+                }
+              }
+            },
+            "EmailAddresses": {
+              "type": "array",
+              "items": {}
+            },
+            "Language": {
+              "type": "string"
+            },
+            "Citizenship": {
+              "type": "array",
+              "items": {}
+            },
+            "Address": {
+              "type": "object",
+              "properties": {
+                "StreetAddress": {
+                  "type": "string"
+                },
+                "City": {
+                  "type": "string"
+                },
+                "State": {
+                  "type": "string"
+                },
+                "ZIP": {
+                  "type": "string"
+                },
+                "County": {
+                  "type": "string"
+                },
+                "Country": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "Notes": {
+          "type": "array",
+          "items": {}
+        },
+        "Weight": {
+          "type": "string"
+        },
+        "IsPregnant": {
+          "type": "string"
+        }
+      }
+    },
+    "Claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "string"
+          },
+          "Type": {
+            "type": "string"
+          },
+          "TotalAmount": {
+            "type": "string"
+          },
+          "CopayAmount": {
+            "type": "string"
+          },
+          "IsProviderSignatureOnFile": {
+            "type": "boolean"
+          },
+          "IsReleaseOfInformationOnFile": {
+            "type": "boolean"
+          },
+          "ReferenceNumbers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "type": "string"
+                },
+                "Type": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "Visit": {
+            "type": "object",
+            "properties": {
+              "DateTime": {
+                "type": "string"
+              },
+              "DischargeDateTime": {
+                "type": "string"
+              },
+              "Type": {
+                "type": "string"
+              },
+              "Location": {
+                "type": "object",
+                "properties": {
+                  "Type": {
+                    "type": "string"
+                  },
+                  "Facility": {
+                    "type": "string"
+                  },
+                  "Department": {
+                    "type": "string"
+                  },
+                  "Room": {
+                    "type": "string"
+                  }
+                }
+              },
+              "PreviousLocation": {
+                "type": "object",
+                "properties": {
+                  "Type": {
+                    "type": "string"
+                  },
+                  "Facility": {
+                    "type": "string"
+                  },
+                  "Department": {
+                    "type": "string"
+                  },
+                  "Room": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "AdditionalDates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Type": {
+                  "type": "string"
+                },
+                "DateTime": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "Diagnoses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Code": {
+                  "type": "string"
+                },
+                "Codeset": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "Type": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "DiagnosisRelatedGroup": {
+            "type": "string"
+          },
+          "Procedures": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Code": {
+                  "type": "string"
+                },
+                "CodeSet": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "Modifiers": {
+                  "type": "array",
+                  "items": {}
+                }
+              }
+            }
+          },
+          "Lines": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "type": "string"
+                },
+                "Amount": {
+                  "type": "string"
+                },
+                "Procedure": {
+                  "type": "object",
+                  "properties": {
+                    "Code": {
+                      "type": "string"
+                    },
+                    "CodeSet": {
+                      "type": "string"
+                    },
+                    "Name": {
+                      "type": "string"
+                    },
+                    "Modifiers": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                },
+                "ServiceDateTime": {
+                  "type": "string"
+                },
+                "ServiceEndDateTime": {
+                  "type": "string"
+                },
+                "RevenueCode": {
+                  "type": "string"
+                },
+                "UnitCount": {
+                  "type": "string"
+                },
+                "Units": {
+                  "type": "string"
+                },
+                "IsEmergency": {
+                  "type": "string"
+                },
+                "Notes": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "Providers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "type": "string"
+                },
+                "IDType": {
+                  "type": "string"
+                },
+                "Role": {
+                  "type": "string"
+                },
+                "FirstName": {
+                  "type": "string"
+                },
+                "MiddleName": {
+                  "type": "string"
+                },
+                "LastName": {
+                  "type": "string"
+                },
+                "Specialty": {
+                  "type": "object",
+                  "properties": {
+                    "ID": {
+                      "type": "string"
+                    },
+                    "Description": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Meta"
+  ]
+}

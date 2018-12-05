@@ -1,0 +1,469 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Visit": {
+      "type": "object",
+      "properties": {
+        "CancelReason": {
+          "type": "string"
+        },
+        "VisitNumber": {
+          "type": "string"
+        },
+        "Status": {
+          "type": "string"
+        },
+        "PatientClass": {
+          "type": "string"
+        },
+        "Notes": {
+          "type": "array",
+          "items": {}
+        },
+        "AttendingProvider": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "string"
+            },
+            "IDType": {
+              "type": "string"
+            },
+            "FirstName": {
+              "type": "string"
+            },
+            "LastName": {
+              "type": "string"
+            },
+            "Credentials": {
+              "type": "array",
+              "items": {}
+            },
+            "Address": {
+              "type": "object",
+              "properties": {
+                "StreetAddress": {
+                  "type": "string"
+                },
+                "City": {
+                  "type": "string"
+                },
+                "State": {
+                  "type": "string"
+                },
+                "ZIP": {
+                  "type": "string"
+                },
+                "County": {
+                  "type": "string"
+                },
+                "Country": {
+                  "type": "string"
+                }
+              }
+            },
+            "Location": {
+              "type": "object",
+              "properties": {
+                "Type": {
+                  "type": "string"
+                },
+                "Facility": {
+                  "type": "string"
+                },
+                "Department": {
+                  "type": "string"
+                },
+                "Room": {
+                  "type": "string"
+                }
+              }
+            },
+            "PhoneNumber": {
+              "type": "object",
+              "properties": {
+                "Office": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "Location": {
+          "type": "object",
+          "properties": {
+            "Type": {
+              "type": "string"
+            },
+            "Facility": {
+              "type": "string"
+            },
+            "Department": {
+              "type": "string"
+            },
+            "Room": {
+              "type": "string"
+            },
+            "Bed": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Department"
+          ]
+        },
+        "Diagnoses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "Codeset": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "Type": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "VisitNumber",
+        "Location"
+      ]
+    },
+    "Meta": {
+      "type": "object",
+      "properties": {
+        "DataModel": {
+          "type": "string"
+        },
+        "EventType": {
+          "type": "string"
+        },
+        "EventDateTime": {
+          "type": "string"
+        },
+        "Test": {
+          "type": "boolean"
+        },
+        "Source": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "string"
+            },
+            "Name": {
+              "type": "string"
+            }
+          }
+        },
+        "Destinations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ID": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "Message": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "number"
+            }
+          }
+        },
+        "Transmission": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "number"
+            }
+          }
+        },
+        "FacilityCode": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "DataModel",
+        "EventType"
+      ]
+    },
+    "Patient": {
+      "type": "object",
+      "properties": {
+        "Identifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ID": {
+                "type": "string"
+              },
+              "IDType": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "ID",
+              "IDType"
+            ]
+          }
+        },
+        "Demographics": {
+          "type": "object",
+          "properties": {
+            "FirstName": {
+              "type": "string"
+            },
+            "MiddleName": {
+              "type": "string"
+            },
+            "LastName": {
+              "type": "string"
+            },
+            "DOB": {
+              "type": "string"
+            },
+            "SSN": {
+              "type": "string"
+            },
+            "Sex": {
+              "type": "string"
+            },
+            "Race": {
+              "type": "string"
+            },
+            "IsHispanic": {
+              "type": "boolean"
+            },
+            "MaritalStatus": {
+              "type": "string"
+            },
+            "IsDeceased": {
+              "type": "boolean"
+            },
+            "DeathDateTime": {
+              "type": "string"
+            },
+            "PhoneNumber": {
+              "type": "object",
+              "properties": {
+                "Home": {
+                  "type": "string"
+                },
+                "Office": {
+                  "type": "string"
+                },
+                "Mobile": {
+                  "type": "string"
+                }
+              }
+            },
+            "EmailAddresses": {
+              "type": "array",
+              "items": {}
+            },
+            "Language": {
+              "type": "string"
+            },
+            "Citizenship": {
+              "type": "array",
+              "items": {}
+            },
+            "Address": {
+              "type": "object",
+              "properties": {
+                "StreetAddress": {
+                  "type": "string"
+                },
+                "City": {
+                  "type": "string"
+                },
+                "State": {
+                  "type": "string"
+                },
+                "ZIP": {
+                  "type": "string"
+                },
+                "County": {
+                  "type": "string"
+                },
+                "Country": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "Notes": {
+          "type": "array",
+          "items": {}
+        }
+      },
+      "required": [
+        "Identifiers"
+      ]
+    },
+    "Procedures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Code": {
+            "type": "string"
+          },
+          "Codeset": {
+            "type": "string"
+          },
+          "Description": {
+            "type": "string"
+          },
+          "DateTime": {
+            "type": "string"
+          },
+          "Duration": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "DateTime",
+          "Duration"
+        ]
+      }
+    },
+    "SurgeryStaff": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "string"
+          },
+          "IDType": {
+            "type": "string"
+          },
+          "FirstName": {
+            "type": "string"
+          },
+          "LastName": {
+            "type": "string"
+          },
+          "Credentials": {
+            "type": "array",
+            "items": {}
+          },
+          "Address": {
+            "type": "object",
+            "properties": {
+              "StreetAddress": {
+                "type": "string"
+              },
+              "City": {
+                "type": "string"
+              },
+              "State": {
+                "type": "string"
+              },
+              "ZIP": {
+                "type": "string"
+              },
+              "County": {
+                "type": "string"
+              },
+              "Country": {
+                "type": "string"
+              }
+            }
+          },
+          "Location": {
+            "type": "object",
+            "properties": {
+              "Type": {
+                "type": "string"
+              },
+              "Facility": {
+                "type": "string"
+              },
+              "Department": {
+                "type": "string"
+              },
+              "Room": {
+                "type": "string"
+              }
+            }
+          },
+          "PhoneNumber": {
+            "type": "object",
+            "properties": {
+              "Office": {
+                "type": "string"
+              }
+            }
+          },
+          "Role": {
+            "type": "object",
+            "properties": {
+              "Code": {
+                "type": "string"
+              },
+              "Codeset": {
+                "type": "string"
+              },
+              "Description": {
+                "type": "string"
+              }
+            }
+          },
+          "StartDateTime": {
+            "type": "string"
+          },
+          "Duration": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "SurgicalInfo": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Code": {
+            "type": "string"
+          },
+          "Codeset": {
+            "type": "string"
+          },
+          "Description": {
+            "type": "string"
+          },
+          "Value": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Visit",
+    "Meta",
+    "Patient",
+    "Procedures"
+  ]
+}

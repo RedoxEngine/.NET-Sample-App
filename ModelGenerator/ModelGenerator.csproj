@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8620BA7-F663-424D-AA9B-766A14DAF124}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ModelGenerator</RootNamespace>
+    <AssemblyName>ModelGenerator</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NJsonSchema, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c2f9c3bdfae56102, processorArchitecture=MSIL">
+      <HintPath>..\packages\NJsonSchema.9.3.0\lib\net45\NJsonSchema.dll</HintPath>
+    </Reference>
+    <Reference Include="NJsonSchema.CodeGeneration, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c2f9c3bdfae56102, processorArchitecture=MSIL">
+      <HintPath>..\packages\NJsonSchema.CodeGeneration.9.3.0\lib\net451\NJsonSchema.CodeGeneration.dll</HintPath>
+    </Reference>
+    <Reference Include="NJsonSchema.CodeGeneration.CSharp, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c2f9c3bdfae56102, processorArchitecture=MSIL">
+      <HintPath>..\packages\NJsonSchema.CodeGeneration.CSharp.9.3.0\lib\net451\NJsonSchema.CodeGeneration.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="JsonSchemas\claim\payment.json" />
+    <None Include="JsonSchemas\claim\submission.json" />
+    <None Include="JsonSchemas\clinicalsummary\patientpush.json" />
+    <None Include="JsonSchemas\clinicalsummary\patientquery.json" />
+    <None Include="JsonSchemas\clinicalsummary\patientqueryresponse.json" />
+    <None Include="JsonSchemas\clinicalsummary\visitpush.json" />
+    <None Include="JsonSchemas\clinicalsummary\visitquery.json" />
+    <None Include="JsonSchemas\clinicalsummary\visitqueryresponse.json" />
+    <None Include="JsonSchemas\device\new.json" />
+    <None Include="JsonSchemas\financial\transaction.json" />
+    <None Include="JsonSchemas\flowsheet\new.json" />
+    <None Include="JsonSchemas\inventory\deplete.json" />
+    <None Include="JsonSchemas\inventory\update.json" />
+    <None Include="JsonSchemas\media\delete.json" />
+    <None Include="JsonSchemas\media\new.json" />
+    <None Include="JsonSchemas\media\replace.json" />
+    <None Include="JsonSchemas\notes\delete.json" />
+    <None Include="JsonSchemas\notes\new.json" />
+    <None Include="JsonSchemas\notes\replace.json" />
+    <None Include="JsonSchemas\order\cancel.json" />
+    <None Include="JsonSchemas\order\groupedorders.json" />
+    <None Include="JsonSchemas\order\new.json" />
+    <None Include="JsonSchemas\order\update.json" />
+    <None Include="JsonSchemas\patientadmin\arrival.json" />
+    <None Include="JsonSchemas\patientadmin\cancel.json" />
+    <None Include="JsonSchemas\patientadmin\discharge.json" />
+    <None Include="JsonSchemas\patientadmin\newpatient.json" />
+    <None Include="JsonSchemas\patientadmin\patientmerge.json" />
+    <None Include="JsonSchemas\patientadmin\patientupdate.json" />
+    <None Include="JsonSchemas\patientadmin\preadmit.json" />
+    <None Include="JsonSchemas\patientadmin\registration.json" />
+    <None Include="JsonSchemas\patientadmin\transfer.json" />
+    <None Include="JsonSchemas\patientadmin\visitupdate.json" />
+    <None Include="JsonSchemas\patientsearch\query.json" />
+    <None Include="JsonSchemas\patientsearch\response.json" />
+    <None Include="JsonSchemas\referral\cancel.json" />
+    <None Include="JsonSchemas\referral\modify.json" />
+    <None Include="JsonSchemas\referral\new.json" />
+    <None Include="JsonSchemas\results\new.json" />
+    <None Include="JsonSchemas\results\newunsolicited.json" />
+    <None Include="JsonSchemas\scheduling\availableslots.json" />
+    <None Include="JsonSchemas\scheduling\availableslotsresponse.json" />
+    <None Include="JsonSchemas\scheduling\booked.json" />
+    <None Include="JsonSchemas\scheduling\bookedresponse.json" />
+    <None Include="JsonSchemas\scheduling\cancel.json" />
+    <None Include="JsonSchemas\scheduling\modification.json" />
+    <None Include="JsonSchemas\scheduling\new.json" />
+    <None Include="JsonSchemas\scheduling\noshow.json" />
+    <None Include="JsonSchemas\scheduling\reschedule.json" />
+    <None Include="JsonSchemas\surgicalscheduling\cancel.json" />
+    <None Include="JsonSchemas\surgicalscheduling\modification.json" />
+    <None Include="JsonSchemas\surgicalscheduling\new.json" />
+    <None Include="JsonSchemas\surgicalscheduling\noshow.json" />
+    <None Include="JsonSchemas\surgicalscheduling\reschedule.json" />
+    <None Include="JsonSchemas\vaccination\new.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

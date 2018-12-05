@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A51C6146-371C-446C-895F-92AB3BBCAB9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RedoxApi</RootNamespace>
+    <AssemblyName>RedoxApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ModelActions\MediaActions.cs" />
+    <Compile Include="ModelActions\ModelActionsBase.cs" />
+    <Compile Include="ModelActions\PatientAdminActions.cs" />
+    <Compile Include="ModelActions\SchedulingActions.cs" />
+    <Compile Include="Models\AuthorizationResponse.cs" />
+    <Compile Include="Models\claim\payment.cs" />
+    <Compile Include="Models\claim\submission.cs" />
+    <Compile Include="Models\VerifyDestinationBody.cs" />
+    <Compile Include="Models\clinicalsummary\patientpush.cs" />
+    <Compile Include="Models\clinicalsummary\patientquery.cs" />
+    <Compile Include="Models\clinicalsummary\patientqueryresponse.cs" />
+    <Compile Include="Models\clinicalsummary\visitpush.cs" />
+    <Compile Include="Models\clinicalsummary\visitquery.cs" />
+    <Compile Include="Models\clinicalsummary\visitqueryresponse.cs" />
+    <Compile Include="Models\device\new.cs" />
+    <Compile Include="Models\financial\transaction.cs" />
+    <Compile Include="Models\flowsheet\new.cs" />
+    <Compile Include="Models\inventory\deplete.cs" />
+    <Compile Include="Models\inventory\update.cs" />
+    <Compile Include="Models\media\delete.cs" />
+    <Compile Include="Models\media\new.cs" />
+    <Compile Include="Models\media\replace.cs" />
+    <Compile Include="Models\notes\delete.cs" />
+    <Compile Include="Models\notes\new.cs" />
+    <Compile Include="Models\notes\replace.cs" />
+    <Compile Include="Models\order\cancel.cs" />
+    <Compile Include="Models\order\groupedorders.cs" />
+    <Compile Include="Models\order\new.cs" />
+    <Compile Include="Models\order\update.cs" />
+    <Compile Include="Models\patientadmin\arrival.cs" />
+    <Compile Include="Models\patientadmin\cancel.cs" />
+    <Compile Include="Models\patientadmin\discharge.cs" />
+    <Compile Include="Models\patientadmin\newpatient.cs" />
+    <Compile Include="Models\patientadmin\patientmerge.cs" />
+    <Compile Include="Models\patientadmin\patientupdate.cs" />
+    <Compile Include="Models\patientadmin\preadmit.cs" />
+    <Compile Include="Models\patientadmin\registration.cs" />
+    <Compile Include="Models\patientadmin\transfer.cs" />
+    <Compile Include="Models\patientadmin\visitupdate.cs" />
+    <Compile Include="Models\patientsearch\query.cs" />
+    <Compile Include="Models\patientsearch\response.cs" />
+    <Compile Include="Models\referral\cancel.cs" />
+    <Compile Include="Models\referral\modify.cs" />
+    <Compile Include="Models\referral\new.cs" />
+    <Compile Include="Models\results\new.cs" />
+    <Compile Include="Models\results\newunsolicited.cs" />
+    <Compile Include="Models\scheduling\availableslots.cs" />
+    <Compile Include="Models\scheduling\availableslotsresponse.cs" />
+    <Compile Include="Models\scheduling\booked.cs" />
+    <Compile Include="Models\scheduling\bookedresponse.cs" />
+    <Compile Include="Models\scheduling\cancel.cs" />
+    <Compile Include="Models\scheduling\modification.cs" />
+    <Compile Include="Models\scheduling\new.cs" />
+    <Compile Include="Models\scheduling\noshow.cs" />
+    <Compile Include="Models\scheduling\reschedule.cs" />
+    <Compile Include="Models\surgicalscheduling\cancel.cs" />
+    <Compile Include="Models\surgicalscheduling\modification.cs" />
+    <Compile Include="Models\surgicalscheduling\new.cs" />
+    <Compile Include="Models\surgicalscheduling\noshow.cs" />
+    <Compile Include="Models\surgicalscheduling\reschedule.cs" />
+    <Compile Include="Models\vaccination\new.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedoxAuthenticator.cs" />
+    <Compile Include="RedoxClient.cs" />
+    <Compile Include="Urls.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

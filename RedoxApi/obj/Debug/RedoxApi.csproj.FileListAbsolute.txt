@@ -1,0 +1,12 @@
+C:\Projects\redox-.NET-SDK-master\RedoxApi\bin\Debug\RedoxApi.dll.config
+C:\Projects\redox-.NET-SDK-master\RedoxApi\bin\Debug\RedoxApi.dll
+C:\Projects\redox-.NET-SDK-master\RedoxApi\bin\Debug\RedoxApi.pdb
+C:\Projects\redox-.NET-SDK-master\RedoxApi\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\redox-.NET-SDK-master\RedoxApi\bin\Debug\RestSharp.dll
+C:\Projects\redox-.NET-SDK-master\RedoxApi\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\redox-.NET-SDK-master\RedoxApi\bin\Debug\RestSharp.xml
+C:\Projects\redox-.NET-SDK-master\RedoxApi\obj\Debug\RedoxApi.csprojAssemblyReference.cache
+C:\Projects\redox-.NET-SDK-master\RedoxApi\obj\Debug\RedoxApi.csproj.CoreCompileInputs.cache
+C:\Projects\redox-.NET-SDK-master\RedoxApi\obj\Debug\RedoxApi.csproj.CopyComplete
+C:\Projects\redox-.NET-SDK-master\RedoxApi\obj\Debug\RedoxApi.dll
+C:\Projects\redox-.NET-SDK-master\RedoxApi\obj\Debug\RedoxApi.pdb
